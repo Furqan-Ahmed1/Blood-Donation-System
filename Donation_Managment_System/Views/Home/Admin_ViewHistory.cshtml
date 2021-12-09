@@ -1,0 +1,64 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Donation History</title>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+    <style>
+
+        h2 {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    @*@include('admin_partials.navbody')*@
+    <div class="container">
+        <main role="main">
+
+
+        <h2>Blood Donation History</h2><br>
+        <div class="table-responsive">
+            <table class="table table-striped">
+                <thead class="thead-dark ">
+                    <tr>
+                        <th>Serial #</th>
+                        <th>Donor ID</th>
+                        <th>Recipient ID</th>
+                        <th>Report ID</th>
+                        <th>Quantity (ltr)</th>
+                    </tr>
+                </thead>
+                @*<tbody>
+                    <?php $x = 1 ?>
+                    @foreach ($blood_his as $d1)
+                    <tr>
+                        <td><?php echo $x; $x++;?></td>
+                        <td>{{$d1->donor_id}}</td>
+                        <td>{{$d1->recipient_id}}</td>
+                        <td>{{$d1->donor_report_id}} </td>
+                        <td>{{$d1->quantity}} </td>
+                    </tr>
+                    @endforeach
+
+                </tbody>*@
+            </table>
+        </div>
+
+
+</main>
+</div>
+
+
+
+
+</body>
+</html>

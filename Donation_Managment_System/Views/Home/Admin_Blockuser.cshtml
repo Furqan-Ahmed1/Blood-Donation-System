@@ -1,0 +1,175 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Manage User</title>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Jekyll v4.1.1">
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/dashboard/">
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" href="/docs/4.5/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
+    <link rel="icon" href="/docs/4.5/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="/docs/4.5/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+    <link rel="manifest" href="/docs/4.5/assets/img/favicons/manifest.json">
+    <link rel="mask-icon" href="/docs/4.5/assets/img/favicons/safari-pinned-tab.svg" color="#563d7c">
+    <link rel="icon" href="/docs/4.5/assets/img/favicons/favicon.ico">
+    <meta name="msapplication-config" content="/docs/4.5/assets/img/favicons/browserconfig.xml">
+    <meta name="theme-color" content="#563d7c">
+
+    
+    
+    </script>
+    <style>
+        body {
+            background-color: #495057 margin-top:20px;
+        }
+
+        .card {
+            border: none;
+            -webkit-box-shadow: 1px 0 20px rgba(96,93,175,.05);
+            box-shadow: 1px 0 20px rgba(96,93,175,.05);
+            margin-bottom: 30px;
+        }
+
+        .table th {
+            font-weight: 500;
+            color: #827fc0;
+        }
+
+        .table thead {
+            background-color: #f3f2f7;
+        }
+
+        .table > tbody > tr > td, .table > tfoot > tr > td, .table > thead > tr > td {
+            padding: 14px 12px;
+            vertical-align: middle;
+        }
+
+        .table tr td {
+            color: #8887a9;
+        }
+
+        .thumb-sm {
+            height: 32px;
+            width: 32px;
+        }
+
+        .badge-soft-warning {
+            background-color: rgba(248,201,85,.2);
+            color: #f8c955;
+        }
+
+        .badge {
+            font-weight: 500;
+        }
+
+        .badge-soft-primary {
+            background-color: rgba(96,93,175,.2);
+            color: #605daf;
+        }
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+
+
+
+        h2 {
+            text-align: center;
+        }
+
+
+        .btn1 {
+            display: block;
+            background-color: #696969;
+            width: 80px;
+            height: 40px;
+            line-height: 10px;
+            margin: auto;
+            color: #fff;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            cursor: pointer;
+            overflow: hidden;
+            border-radius: 5px;
+            box-shadow: 0 0 20px 0 rgba(0,0,0,.3);
+        }
+
+        span {
+            width: 72%;
+            line-height: inherit;
+            font-size: 13px;
+            text-transform: uppercase;
+        }
+
+
+        .btn1:hover {
+            -webkit-box-shadow: -300px 0 0 #1b1e23 inset;
+        }
+    </style>
+
+
+</head>
+<body>
+
+    <div class="container">
+        <main role="main">
+
+            <h2>Blocked Users</h2>
+            <div class="table-responsive">
+                <table class="table table-striped ">
+                    <thead class="thead-dark ">
+                        <tr>
+                            <th>ID#</th>
+                            <th>Email</th>
+                            <th>Cnic</th>
+                            <th>Manage</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                       @* @foreach ($blockeduser as $d1)
+            <tr>
+                <td>{{$d1->blockeduser_id}} </td>
+                <td>{{$d1->email}} </td>
+                <td>{{$d1->cnic}}</td>
+                <td>
+                    <form accept-charset="UTF-8" action="Removeblock_user" method="post">
+                        @csrf
+                        <input type="hidden" name="blockeduser_id" value="<?php echo $d1->blockeduser_id; ?>">
+                        <button class="btn1" type="submit" name="submit"><span>Remove</span></button>
+                    </form>
+                </td>
+            </tr>
+                        @endforeach*@
+                    </tbody>
+                </table>
+            </div>
+        </main>
+    </div>
+
+
+
+
+
+</body>
+</html>
