@@ -1,2 +1,2 @@
 # Blood Donation System
-Drone surveillance system (DJI Mavic Air 2)
+Web App on Blood Donation Management System (.NET Framework)
